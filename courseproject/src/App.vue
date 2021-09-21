@@ -4,15 +4,15 @@
       <el-menu :default-openeds="['1', '3']" class="leftMenu">
         <el-sub-menu index="1">
           <template #title><i class="el-icon-info"></i>前言</template>
-          <router-link to="/">
+          <router-link class="linkStyle" to="/introduce">
             <el-menu-item index="1-1-1">介绍</el-menu-item>
           </router-link>
         </el-sub-menu>
         <el-sub-menu index="2">
-          <template #title><i class="el-icon-html"></i>HTML</template>
+          <template #title><i class="el-icon-more"></i>HTML</template>
           <el-menu-item-group>
             <template #title>分组一</template>
-            <router-link to="/about">
+            <router-link class="linkStyle" to="/about">
               <el-menu-item index="2-1">About</el-menu-item>
             </router-link>
             <el-menu-item index="2-2">选项2</el-menu-item>
@@ -26,7 +26,7 @@
           </el-sub-menu>
         </el-sub-menu>
         <el-sub-menu index="3">
-          <template #title><i class="el-icon-setting"></i>CSS</template>
+          <template #title><i class="el-icon-more"></i>CSS</template>
           <el-menu-item-group>
             <template #title>分组一</template>
             <el-menu-item index="3-1">选项1</el-menu-item>
@@ -41,7 +41,7 @@
           </el-sub-menu>
         </el-sub-menu>
         <el-sub-menu index="4">
-          <template #title><i class="el-icon-setting"></i>JavaScript</template>
+          <template #title><i class="el-icon-more"></i>JavaScript</template>
           <el-menu-item-group>
             <template #title>分组一</template>
             <el-menu-item index="3-1">选项1</el-menu-item>

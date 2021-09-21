@@ -31,8 +31,37 @@ body {
     margin: 0 !important;
 }
 
-.el-sub-menu__title{
+.el-sub-menu__title {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.linkStyle {
+    text-decoration: none;
+}
+
+@-webkit-keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.showAnim {
+    -webkit-animation: show 1s;
+}
+
+.introCard{
+    margin: 25px;
+    width: 80%;
+}
+
+.introBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
