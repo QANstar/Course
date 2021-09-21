@@ -1,7 +1,38 @@
-.leftNav{
+.leftNav {
     position: fixed;
+    height: 100vh;
+    border-right: solid 1px #e6e6e6;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
-.contentMain{
+.leftNav::-webkit-scrollbar {
+    display: none;
+}
+
+.leftMenu {
+    border: none !important;
+}
+
+.contentMain {
     padding-left: 200px;
+}
+
+.topHeader {
+    text-align: left;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    font-family: Avenir;
+    border-bottom: solid 1px #e6e6e6;
+}
+
+body {
+    margin: 0 !important;
+}
+
+.el-sub-menu__title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
