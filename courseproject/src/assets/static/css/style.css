@@ -107,3 +107,14 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+.tabBoxs{
+    background-color: #f4f5f7;
+    color: #6b778c;
+    padding: 20px;
+    line-height: 40px;
+}
+
+.eleImg img{
+    width: 40%;
+}
