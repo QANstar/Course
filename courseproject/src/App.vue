@@ -5,7 +5,10 @@
         <el-sub-menu index="1">
           <template #title><i class="el-icon-info"></i>前言</template>
           <router-link class="linkStyle" to="/introduce">
-            <el-menu-item index="1-1-1">介绍</el-menu-item>
+            <el-menu-item index="1-1-1">准备</el-menu-item>
+          </router-link>
+          <router-link class="linkStyle" to="/devTool">
+            <el-menu-item index="1-1-2">开发者工具</el-menu-item>
           </router-link>
         </el-sub-menu>
         <el-sub-menu index="2">
@@ -62,7 +65,7 @@
       <span>前端教程</span>
     </el-header>
 
-    <el-main>
+    <el-main class="main">
       <router-view/>
     </el-main>
   </el-container>

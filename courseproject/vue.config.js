@@ -22,5 +22,6 @@ module.exports = {
       swSrc: "./src/service-worker.js", // 自定义sw文件的位置
       importWorkboxFrom: "disabled" // 是否要引入线上的service-worker文件，我们只需要自己定义的文件，不需要谷歌提供的sw文件
     }
-  }
+  },
+  publicPath: process.env.NODE_ENV === "production" ? "/CoursePage" : "/"
 }
