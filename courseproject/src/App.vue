@@ -1,7 +1,7 @@
 <template>
   <el-container >
     <el-aside width="200px" class="leftNav">
-      <el-menu :default-openeds="['1', '3']" class="leftMenu">
+      <el-menu class="leftMenu">
         <el-sub-menu index="1">
           <template #title><i class="el-icon-info"></i>前言</template>
           <router-link class="linkStyle" to="/introduce">
@@ -13,20 +13,15 @@
         </el-sub-menu>
         <el-sub-menu index="2">
           <template #title><i class="el-icon-more"></i>HTML</template>
-          <el-menu-item-group>
-            <template #title>分组一</template>
-            <router-link class="linkStyle" to="/about">
-              <el-menu-item index="2-1">About</el-menu-item>
+            <router-link class="linkStyle" to="/htmlIntroduce">
+              <el-menu-item index="2-1">简介</el-menu-item>
             </router-link>
-            <el-menu-item index="2-2">选项2</el-menu-item>
+          <el-menu-item-group title="body标签">
+            <el-menu-item index="2-4">文本</el-menu-item>
+            <el-menu-item index="2-5">图像</el-menu-item>
+            <el-menu-item index="2-6">表格</el-menu-item>
+            <el-menu-item index="2-7">表单</el-menu-item>
           </el-menu-item-group>
-          <el-menu-item-group title="分组2">
-            <el-menu-item index="2-3">选项3</el-menu-item>
-          </el-menu-item-group>
-          <el-sub-menu index="2-4">
-            <template #title>选项4</template>
-            <el-menu-item index="2-4-1">选项4-1</el-menu-item>
-          </el-sub-menu>
         </el-sub-menu>
         <el-sub-menu index="3">
           <template #title><i class="el-icon-more"></i>CSS</template>

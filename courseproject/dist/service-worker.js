@@ -1,3 +1,3 @@
-importScripts("/CoursePage/precache-manifest.9be458d1bf87e69ad0b9523b603fcb2f.js");
+importScripts("/CoursePage/precache-manifest.d0a6002ddfd74e7d85a4f6b5e90a15c3.js");
 
 
