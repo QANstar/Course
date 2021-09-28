@@ -46,6 +46,30 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () => import('../views/TextTag')
+    },
+    {
+        path: '/imgTag',
+        name: 'imgTag',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('../views/ImgTag')
+    },
+    {
+        path: '/tableTag',
+        name: 'tableTag',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('../views/TableTag')
+    },
+    {
+        path: '/listTag',
+        name: 'listTag',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import('../views/ListTag')
     }
 ]
 

@@ -20,9 +20,16 @@
             <router-link class="linkStyle" to="/textTag">
               <el-menu-item index="2-4">文本</el-menu-item>
             </router-link>
-            <el-menu-item index="2-5">图像</el-menu-item>
-            <el-menu-item index="2-6">表格</el-menu-item>
-            <el-menu-item index="2-7">表单</el-menu-item>
+            <router-link class="linkStyle" to="/imgTag">
+              <el-menu-item index="2-5">图像</el-menu-item>
+            </router-link>
+            <router-link class="linkStyle" to="/listTag">
+              <el-menu-item index="2-6">列表</el-menu-item>
+            </router-link>
+            <router-link class="linkStyle" to="/tableTag">
+              <el-menu-item index="2-7">表格</el-menu-item>
+            </router-link>
+            <el-menu-item index="2-8">表单</el-menu-item>
           </el-menu-item-group>
         </el-sub-menu>
         <el-sub-menu index="3">
