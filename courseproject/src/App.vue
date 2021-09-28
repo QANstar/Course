@@ -1,5 +1,5 @@
 <template>
-  <el-container >
+  <el-container>
     <el-aside width="200px" class="leftNav">
       <el-menu class="leftMenu">
         <el-sub-menu index="1">
@@ -13,11 +13,13 @@
         </el-sub-menu>
         <el-sub-menu index="2">
           <template #title><i class="el-icon-more"></i>HTML</template>
-            <router-link class="linkStyle" to="/htmlIntroduce">
-              <el-menu-item index="2-1">简介</el-menu-item>
-            </router-link>
+          <router-link class="linkStyle" to="/htmlIntroduce">
+            <el-menu-item index="2-1">简介</el-menu-item>
+          </router-link>
           <el-menu-item-group title="body标签">
-            <el-menu-item index="2-4">文本</el-menu-item>
+            <router-link class="linkStyle" to="/textTag">
+              <el-menu-item index="2-4">文本</el-menu-item>
+            </router-link>
             <el-menu-item index="2-5">图像</el-menu-item>
             <el-menu-item index="2-6">表格</el-menu-item>
             <el-menu-item index="2-7">表单</el-menu-item>
@@ -55,15 +57,15 @@
         </el-sub-menu>
       </el-menu>
     </el-aside>
-    <el-container  class="contentMain">
-    <el-header class="topHeader">
-      <span>前端教程</span>
-    </el-header>
+    <el-container class="contentMain">
+      <el-header class="topHeader">
+        <span>前端教程</span>
+      </el-header>
 
-    <el-main class="main">
-      <router-view/>
-    </el-main>
-  </el-container>
+      <el-main class="main">
+        <router-view/>
+      </el-main>
+    </el-container>
 
   </el-container>
 </template>
