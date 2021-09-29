@@ -17,6 +17,9 @@
             <el-menu-item index="2-1">简介</el-menu-item>
           </router-link>
           <el-menu-item-group title="body标签">
+            <router-link class="linkStyle" to="/divTag">
+              <el-menu-item index="2-3">区块</el-menu-item>
+            </router-link>
             <router-link class="linkStyle" to="/textTag">
               <el-menu-item index="2-4">文本</el-menu-item>
             </router-link>
