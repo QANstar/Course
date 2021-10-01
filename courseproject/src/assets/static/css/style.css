@@ -124,3 +124,14 @@ body {
     font-size: 50px;
     margin-top: 40vh;
 }
+
+.topMain{
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+}
+
+.settingIcon{
+    font-size: 20px;
+    line-height: 20px;
+}

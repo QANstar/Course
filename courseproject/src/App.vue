@@ -39,7 +39,9 @@
         </el-sub-menu>
         <el-sub-menu index="3">
           <template #title><i class="el-icon-more"></i>CSS</template>
-
+          <router-link class="linkStyle" to="/cssIntroduce">
+            <el-menu-item index="3-1">简介</el-menu-item>
+          </router-link>
         </el-sub-menu>
         <el-sub-menu index="4">
           <template #title><i class="el-icon-more"></i>JavaScript</template>
@@ -49,9 +51,28 @@
     </el-aside>
     <el-container class="contentMain">
       <el-header class="topHeader">
-        <span>前端教程</span>
+        <div class="topMain">
+          <div>
+            <span>前端教程</span>
+          </div>
+          <div>
+            <el-dropdown>
+            <span class="el-dropdown-link">
+              <i class="el-icon-setting settingIcon"></i>
+            </span>
+              <template #dropdown>
+                <el-dropdown-menu>
+                  <el-dropdown-item>
+                    <span>鼠标粒子特效：</span>
+                    <el-switch @click="mouseEffect" v-model="mouseValue" active-color="#13ce66"
+                               inactive-color="#ff4949"/>
+                  </el-dropdown-item>
+                </el-dropdown-menu>
+              </template>
+            </el-dropdown>
+          </div>
+        </div>
       </el-header>
-
       <el-main class="main">
         <router-view/>
       </el-main>
@@ -59,6 +80,108 @@
 
   </el-container>
 </template>
+
+<script>
+export default {
+  name: "app",
+  data() {
+    return {
+      mouseValue: false,
+    }
+  },
+  methods: {
+    mouseEffect() {
+      isUse = this.mouseValue;
+    }
+  }
+}
+
+
+var isUse = false;
+(function (window, document) {
+  var hearts = [];
+  window.requestAnimationFrame = (function () {
+    return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function (callback) {
+          setTimeout(callback, 1000 / 60);
+        }
+  })();
+  init();
+
+  function init() {
+    css(".heart{width: 1px;height: 1px;position: fixed;pointer-events: none;z-index: 2000;");
+    attachEvent();
+
+    gameloop();
+  }
+
+  function gameloop() {
+    for (var i = 0; i < hearts.length; i++) {
+      if (hearts[i].alpha <= 0) {
+        document.body.removeChild(hearts[i].el);
+        hearts.splice(i, 1);
+        continue;
+      }
+      hearts[i].y++;
+      hearts[i].x += hearts[i].xx;
+      hearts[i].scale -= 0.01;
+      hearts[i].alpha -= 0.008;
+      hearts[i].el.style.cssText = "left:" + hearts[i].x + "px;top:" + hearts[i].y + "px;opacity:" + hearts[i].alpha + ";transform:scale(" + hearts[i].scale + "," + hearts[i].scale + ") rotate(45deg);color:" + hearts[i].color;
+    }
+    requestAnimationFrame(gameloop);
+
+  }
+
+  function attachEvent() {
+    var old = typeof window.onmousemove === "function" && window.onmousemove;
+    window.onmousemove = function (event) {
+      old && old();
+      createHeart(event);
+    }
+  }
+
+  function createHeart(event) {
+    var d = document.createElement("samp");
+    d.className = "heart";
+    d.innerHTML = "*";
+    hearts.push({
+      el: d,
+      x: event.clientX - 8,
+      y: event.clientY - 13,
+      xx: Math.pow(-1, (Math.round(Math.random()))) * Math.random(),
+      scale: 1,
+      alpha: 1,
+      color: randomColor()
+    });
+    document.body.appendChild(d);
+  }
+
+  function css(css) {
+    var style = document.createElement("style");
+    style.type = "text/css";
+    try {
+      style.appendChild(document.createTextNode(css));
+    } catch (ex) {
+      style.styleSheet.cssText = css;
+    }
+    document.getElementsByTagName('head')[0].appendChild(style);
+  }
+
+  function randomColor() {
+    if (isUse) {
+      return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
+    } else {
+      return "rgba(0,0,0,0)";
+    }
+
+  }
+})(window, document);
+
+</script>
 
 <style>
 #app {

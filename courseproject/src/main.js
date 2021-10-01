@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import "@/assets/static/css/style.css"
+import "@/assets/static/js/shubiao"
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import './registerServiceWorker'
